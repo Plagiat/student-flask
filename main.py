@@ -5,6 +5,12 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 
+@app.route('/')
+@app.route('/index')
+def index():
+    return "Привет"
+
+
 def main():
     db_session.global_init("db/students_attendances.sqlite")
     app.run()
