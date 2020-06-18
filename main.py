@@ -13,7 +13,7 @@ def index():
 
 def main():
     db_session.global_init("db/students_attendances.sqlite")
-    app.run(port=5000)
+    app.run()
 
 
 if __name__ == '__main__':
